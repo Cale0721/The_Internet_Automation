@@ -46,6 +46,11 @@ public class HomePage{
         return new FileUploadPage(driver);
     }
 
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     public HorizontalSliderPage clickHorizontalSlider(){
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
@@ -76,6 +81,13 @@ public class HomePage{
         clickLink("Large & Deep DOM");
         return new LargeAndDeepDomPage(driver);
      }
+
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
+
 
         private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
